@@ -1,0 +1,82 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- mood_great
+- uc_ask_name
+- uc_feedback
+- greet
+- uc_state_by_covid
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+- uc_about_covid
+- uc_chitchat
+- uc_covid_news
+- uc_covid_precautions
+- uc_developed_by
+entities:
+- e_state_we_need
+- name
+slots:
+  e_state_we_need:
+    type: unfeaturized
+  name:
+    type: text
+responses:
+  utter_acknowledge:
+  - text: Nice to meet you {name}
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_covid_precautions:
+  - text: "You need to keep following the below Steps constantly as suggested by WHO\
+      \ \n 1. Simple hygiene measures can help protect your family’s health and everyone\
+      \ else's. \n 2. Avoid touching your eyes, nose and mouth. \n 3. Cover your mouth\
+      \ and nose with your elbow or tissue when coughing or sneezing. Dispose of used\
+      \ tissue immediately.\n 4. Maintain a distance of at least 1 meter (3 feet)\
+      \ from people who are coughing or sneezing. \n 5. Wash hands frequently with\
+      \ soap and water for at least 20-30 seconds. \n An easy way to time it with\
+      \ your children is by singing the full happy birthday song, twice."
+  utter_default:
+  - text: "Sorry! I did not get that! It seems to be out of Scope Question!...Could\
+      \ you please rephrase the Question.. \n I am Co-Helper, a bot for Covid 19..!!"
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_disclaimer:
+  - text: "I can tell you important stats about current situation of Covid 19 for\
+      \ different States and Cumulatively \n Tell me how can I help you...?"
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: "Great \n I am Co-Helper, a bot for Covid 19 Meter..!!\n What's your name..??"
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_provide_feedback:
+  - text: Please provide your Feedback
+  utter_thankyou_feedback:
+  - text: "Thank You for your feedback! \n Have a nice Day!!"
+  utter_developed_by:
+  - text: "Developed by Atul Mishra!..For any suggestions, please mail at atul.mishra5001@gmail.com \n\
+          \ Have a nice Day!!"
+actions:
+- action_about_covid
+- action_covid_news
+- action_reset_slot
+- action_state_by_covid
+- utter_acknowledge
+- utter_cheer_up
+- utter_covid_precautions
+- utter_default
+- utter_did_that_help
+- utter_disclaimer
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_provide_feedback
+- utter_thankyou_feedback
